@@ -16,15 +16,17 @@
 	<input type="text" ng-model="hi" />
 	<p>{{ hi }}</p>
  --> 
-	<ul>
-		<li ng-click="done(item)" ng-class="{done:item.done}" ng-repeat="item in todos">
-			{{ item.todo }}
-		</li>	
-	</ul>
 
 	<input type="text" ng-model="newTodo" />
 
 	<button ng-click="addTodo()">Add</button>
+
+	<ul>
+		<li ng-click="done(item)" ng-class="{done:item.done}" ng-repeat="item in todos">
+			{{ item.todo }}
+			<button ng-click="remove($index)">Remove</button>	
+		</li>
+	</ul>
  </div>
 
 
